@@ -33,8 +33,8 @@ def main():
 
     # Directories containing augmented images
     data_directories = [
-        os.path.join(base_folder, 'lecture_augmented'),
-        os.path.join(base_folder, 'no_lecture_augmented')
+        os.path.join(base_folder, 'lecture'),
+        os.path.join(base_folder, 'no_lecture')
     ]
 
     # Create ImageDataGenerator
@@ -52,7 +52,7 @@ def main():
         target_size=target_size,
         batch_size=batch_size,
         class_mode='categorical',
-        classes=['lecture_augmented', 'no_lecture_augmented'],
+        classes=['lecture', 'no_lecture'],
         subset='training'
     )
 
@@ -62,7 +62,7 @@ def main():
         target_size=target_size,
         batch_size=batch_size,
         class_mode='categorical',
-        classes=['lecture_augmented', 'no_lecture_augmented'],
+        classes=['lecture', 'no_lecture'],
         subset='validation'
     )
 

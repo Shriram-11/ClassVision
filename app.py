@@ -14,7 +14,7 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 model = load_model('./model/saved_model/final_model.keras')
 
 # Define your class names (update as per your model's classes)
-CLASS_NAMES = ['lecture_augmented', 'no_lecture_augmented']
+CLASS_NAMES = ['lecture', 'no_lecture']
 
 
 def prepare_image(image_path):
